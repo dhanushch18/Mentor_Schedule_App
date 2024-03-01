@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Availability</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: #fff;
+        }
+
+        .mentor-card {
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .mentor-card img {
+            max-width: 30%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .online {
+            border-color: #27ae60;
+        }
+
+        .offline {
+            border-color: #e74c3c;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        /* Schedule Modal Styles */
+        .modal-content {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .modal-header, .modal-footer {
+            border-color: #777;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-4 mb-4">Mentor Availability</h1>
+
+
+    <div class="row">
+        <!-- Mentor 1 -->
+        <div class="col-md-4 mentor-card text-center online">
+            <img src="{% static 'mentor_1.jpg' %}" alt="Mentor 1">
+            <h3>Mentor 1</h3>
+
+            <p>Status: <span style="color: greenyellow;">Online</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal1">Schedule</button>
+        </div>
+
+        <!-- Mentor 2 -->
+        <div class="col-md-4 mentor-card text-center offline">
+            <img src="{% static 'mentor_2.jpg' %}" alt="Mentor 2">
+            <h3>Mentor 2</h3>
+            <p>Status: <span style="color: red;">Offline</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal2">Schedule</button>
+        </div>
+
+        <!-- Mentor 3 -->
+        <div class="col-md-4 mentor-card text-center online">
+            <img src="{% static 'mentor_3.jpg' %}" alt="Mentor 3">
+            <h3>Mentor 3</h3>
+            <p>Status: <span style="color: greenyellow;">Online</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal3">Schedule</button>
+        </div>
+
+        <!-- Mentor 4 -->
+        <div class="col-md-4 mentor-card text-center offline">
+            <img src="{% static 'mentor_4.jpg' %}" alt="Mentor 4">
+            <h3>Mentor 4</h3>
+            <p>Status: <span style="color: red;">Offline</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal4">Schedule</button>
+        </div>
+
+        <!-- Mentor 5 -->
+        <div class="col-md-4 mentor-card text-center online">
+            <img src="{% static 'mentor_5.png' %}" alt="Mentor 5">
+            <h3>Mentor 5</h3>
+            <p>Status: <span style="color: greenyellow;">Online</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal5">Schedule</button>
+        </div>
+
+        <!-- Mentor 6 -->
+        <div class="col-md-4 mentor-card text-center online">
+            <img src="{% static 'mentor_6.jpg' %}" alt="Mentor 6">
+            <h3>Mentor 6</h3>
+            <p>Status: <span style="color: greenyellow;">Online</span></p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#scheduleModal6">Schedule</button>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Modal for Mentor 1 -->
+<div class="modal" id="scheduleModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 1</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>Tap on schedule to have class with Mentor 1</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Modal for Mentor 2 -->
+<div class="modal" id="scheduleModal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 2</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>The mentor is offline.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Modal for Mentor 3 -->
+<div class="modal" id="scheduleModal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 3</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>Tap on schedule to have class with Mentor 3.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Modal for Mentor 4 -->
+<div class="modal" id="scheduleModal4">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 4</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>The mentor is Offline.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Schedule Modal for Mentor 5 -->
+<div class="modal" id="scheduleModal5">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 5</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>Tap on schedule to have class with Mentor 5</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Schedule Modal for Mentor 6 -->
+<div class="modal" id="scheduleModal6">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Schedule Class with Mentor 6</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Add your scheduling form or content here -->
+                <p>Tap on schedule to have class with Mentor 6</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and your custom script -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
